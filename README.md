@@ -1,5 +1,6 @@
 # Discord Bot 
 
+
 To use this bot prefix should be "@" (eg : '@welcome')
 
 <h2>Functions</h2>
