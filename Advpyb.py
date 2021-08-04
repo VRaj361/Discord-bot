@@ -45,6 +45,19 @@ async def Kick(ctx,member:discord.User=None,*,reason=None):
     await member.kick(reason=reason)
     await ctx.channel.send(f"{member} has been kicked")
 
+#Command:6 To Show the Cat Facts (Using API)Show Random Sentence for  Cat Facts
+@cli.command()
+async def Catfact(ctx):
+    data=requests.get('https://catfact.ninja/fact').json()
+    embed = discord.Embed(colour=0x2bc7ff,title=f'Cat Fact',description=f'{data["fact"]}')
+    await ctx.send(embed=embed)
+ 
+ #Command:7 To Show the Dog Facts (Using API)Show Random Sentence for  Dog Facts   
+@cli.command()
+async def Dogfact(ctx):
+    data=requests.get('https://dog-api.kinduff.com/api/facts?number=1').json()
+    embed = discord.Embed(colour=0x2bc7ff,title=f'Dog Fact',description=f'{data["facts"][0]}')
+    await ctx.send(embed=embed)
 
 #To run the TokenId and Check the TokenId in the Discord
 cli.run(tokenid.tokenid)
