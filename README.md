@@ -1,7 +1,7 @@
 # Discord Bot 
 
 
-To use this bot prefix should be "@" (eg : '@welcome')
+To use this bot prefix should be "." (eg : '.Welcome')
 
 <h2>Functions</h2>
 1. Welcome -> Shows Welcome Message <br>
@@ -11,6 +11,7 @@ To use this bot prefix should be "@" (eg : '@welcome')
 5. Unban    -> Can Unban the Members(Using Member-ID) (Admin Rights Required)<br> 
 6. Catfact   -> Can Show the Cat Facts (Admin Rights Required)<br> 
 7. Dogfact   -> Can Show the Dog Facts (Admin Rights Required)<br> 
+8. Meme     -> Can Show The random meme Which are Fetch on the Reddit App
 
 <h2>Add this bot to the Server</h2>
 Link : https://discord.com/api/oauth2/authorize?client_id=867651080380874804&permissions=0&scope=bot<br>

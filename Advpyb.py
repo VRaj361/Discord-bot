@@ -10,7 +10,7 @@ import json
 import requests
 
 #Setting A Prefix to Run the Bot 
-cli=commands.Bot(command_prefix="@")
+cli=commands.Bot(command_prefix=".")
 
 #Command:1 To show the Simple Output 
 @cli.command()
@@ -72,7 +72,13 @@ async def Dogfact(ctx):
     data=requests.get('https://dog-api.kinduff.com/api/facts?number=1').json()
     embed = discord.Embed(colour=0x2bc7ff,title=f'Dog Fact',description=f'{data["facts"][0]}')
     await ctx.send(embed=embed)
-
+    
+#Command:8 To Get the Random Meme on reddit
+@ cli.command(pass_context=True)
+async def Meme(ctx):
+    data=requests.get('https://reddit-meme-api.herokuapp.com/').json()
+    await ctx.send(f'{data["url"]}')
+    
 #To run the TokenId and Check the TokenId in the Discord
 cli.run(tokenid.tokenid)
    
