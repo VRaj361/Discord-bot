@@ -8,6 +8,7 @@ To use this bot prefix should be "@" (eg : '@welcome')
 2. Ask     -> Gives Random Answers <br>
 3. Ban     -> Can Ban the Members (Admin Rights Required)<br>
 4. Kick    -> Can Kick the Members (Admin Rights Required)<br> 
+5. Unban    -> Can Unban the Members(Using Member-ID) (Admin Rights Required)<br> 
 6. Catfact   -> Can Show the Cat Facts (Admin Rights Required)<br> 
 7. Dogfact   -> Can Show the Dog Facts (Admin Rights Required)<br> 
 

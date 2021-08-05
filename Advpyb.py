@@ -45,6 +45,20 @@ async def Kick(ctx,member:discord.User=None,*,reason=None):
     await member.kick(reason=reason)
     await ctx.channel.send(f"{member} has been kicked")
 
+#Commands:5 To Unban the Memeber in our group (Using Member Id)
+@cli.command()
+async def Unban(ctx, *, member):
+  banned_users = await ctx.guild.bans()
+  member_name, member_discriminator = member.split('#')
+
+  for ban_entry in banned_users:
+    user = ban_entry.user
+  
+  if ( user.discriminator) == ( member_discriminator):
+    await ctx.guild.unban(user)
+    await ctx.send(f"{user} have been unbanned sucessfully")
+    return
+
 #Command:6 To Show the Cat Facts (Using API)Show Random Sentence for  Cat Facts
 @cli.command()
 async def Catfact(ctx):
@@ -61,4 +75,5 @@ async def Dogfact(ctx):
 
 #To run the TokenId and Check the TokenId in the Discord
 cli.run(tokenid.tokenid)
+   
    
