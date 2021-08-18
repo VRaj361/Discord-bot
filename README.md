@@ -11,7 +11,7 @@ To use this bot prefix should be "." (eg : '.Welcome')
 5. Unban    -> Can Unban the Members(Using Member-ID) (Admin Rights Required)<br> 
 6. Catfact   -> Can Show the Cat Facts (Admin Rights Required)<br> 
 7. Dogfact   -> Can Show the Dog Facts (Admin Rights Required)<br> 
-8. Meme     -> Can Show The random meme Which are Fetch on the Reddit App
+8. Meme     -> Can Show The random meme Which are Fetch on the Reddit App<br>
 9. Userinfo -> To find the User information like join the Discord,Name with ID,bot or not 
 
 <h2>Add this bot to the Server</h2>
