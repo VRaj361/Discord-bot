@@ -79,6 +79,24 @@ async def Meme(ctx):
     data=requests.get('https://reddit-meme-api.herokuapp.com/').json()
     await ctx.send(f'{data["url"]}')
     
+#Command:9 To Get the information related Bot and User
+@ cli.command()
+async def Userinfo(ctx,member:discord.Member=None):
+    member = ctx.author if not member else member
+    embed=discord.Embed(colour=member.color)
+    
+    embed.set_author(name=f"User info-{member}")
+    embed.set_thumbnail(url=member.avatar_url)
+    embed.set_footer(text=f"Requested by {ctx.author}",icon_url=ctx.author.avatar_url)
+    
+    embed.add_field(name="Username:",value=member.display_name)
+    embed.add_field(name="Created at:",value=member.created_at.strftime("%a, %d %B %Y, %I:%M %p UTC"))
+    embed.add_field(name="joined at:",value=member.joined_at.strftime("%a, %d %B %Y, %I:%M %p UTC"))
+    
+    embed.add_field(name="ID",value=member.id)
+    embed.add_field(name="BOT",value=member.bot)
+    
+    await ctx.send(embed=embed)
 #To run the TokenId and Check the TokenId in the Discord
 cli.run(tokenid.tokenid)
    
