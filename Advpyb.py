@@ -100,9 +100,10 @@ async def Userinfo(ctx,member:discord.Member=None):
     await ctx.send(embed=embed)
     
     
-cli.remove_command('help')
+#Command:10 To Get the Command And his Information
+cli.remove_command('help')#To disable the Help default function 
 @cli.command()
-async def help123(ctx):
+async def Help(ctx):
 
     embed = discord.Embed()
     embed.set_author(name=f"**Here is the list of commands you can use**")
@@ -117,7 +118,7 @@ async def help123(ctx):
     embed.add_field(name="Catfact",value="> Can Show the Cat Facts (Admin Rights Required)")
     
     embed.add_field(name="Dogfact",value="> Can Show the Dog Facts (Admin Rights Required)")
-    embed.add_field(name=" Meme   ",value="> Can Show The random meme Which are Fetch on the Reddit App")
+    embed.add_field(name=" Meme ",value="> Can Show The random meme Which are Fetch on the Reddit App")
     embed.add_field(name="Userinfo",value="> To find the User information like join the Discord,Name with ID,bot or not, Etc.")
      
     await ctx.send(embed=embed)
