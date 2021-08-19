@@ -1,6 +1,7 @@
 #Importing the Libraries which are used
 
 import discord
+from discord.embeds import Embed
 import tok as tokenid
 from discord import colour
 from discord.ext import commands
@@ -96,6 +97,29 @@ async def Userinfo(ctx,member:discord.Member=None):
     embed.add_field(name="ID",value=member.id)
     embed.add_field(name="BOT",value=member.bot)
     
+    await ctx.send(embed=embed)
+    
+    
+cli.remove_command('help')
+@cli.command()
+async def help123(ctx):
+
+    embed = discord.Embed()
+    embed.set_author(name=f"**Here is the list of commands you can use**")
+    embed.set_footer(text=f"For Feedback contact {ctx.author}")
+    
+    embed.add_field(name="Welcome",value="> Shows Welcome Message")
+    embed.add_field(name=" Ask",value="> Gives Random Answers")
+    embed.add_field(name="Ban",value="> Can Ban the Members (Admin Rights Required)")
+    
+    embed.add_field(name=" Kick ",value="> Can Kick the Members (Admin Rights Required)")
+    embed.add_field(name=" Unban  ",value="> Can Unban the Members(Using Member-ID) (Admin Rights Required)")
+    embed.add_field(name="Catfact",value="> Can Show the Cat Facts (Admin Rights Required)")
+    
+    embed.add_field(name="Dogfact",value="> Can Show the Dog Facts (Admin Rights Required)")
+    embed.add_field(name=" Meme   ",value="> Can Show The random meme Which are Fetch on the Reddit App")
+    embed.add_field(name="Userinfo",value="> To find the User information like join the Discord,Name with ID,bot or not, Etc.")
+     
     await ctx.send(embed=embed)
 #To run the TokenId and Check the TokenId in the Discord
 cli.run(tokenid.tokenid)
