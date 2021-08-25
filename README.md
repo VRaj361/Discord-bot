@@ -13,7 +13,8 @@ To use this bot prefix should be "." (eg : '.Welcome')
 7. Dogfact   -> Can Show the Dog Facts (Admin Rights Required)<br> 
 8. Meme     -> Can Show The random meme Which are Fetch on the Reddit App<br>
 9. Userinfo -> To find the User information like join the Discord,Name with ID,bot or not, Etc.<br>
-10. Help    -> To Find All the Function Command and Description
+10. Help    -> To Find All the Function Command and Description <br>
+11. Udic    -> To pass the word and Get the Related defination of the Word
 
 <h2>Add this bot to the Server</h2>
 Link : https://discord.com/api/oauth2/authorize?client_id=867651080380874804&permissions=0&scope=bot<br>

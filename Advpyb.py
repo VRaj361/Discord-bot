@@ -122,6 +122,22 @@ async def Help(ctx):
     embed.add_field(name="Userinfo",value="> To find the User information like join the Discord,Name with ID,bot or not, Etc.")
      
     await ctx.send(embed=embed)
+    
+    
+    
+#Command:11 To pass the Word and give the Defination 
+@cli.command()
+
+async def Udic(ctx,*,word):
+    data = requests.get(f'https://api.urbandictionary.com/v0/define?term={word}').json()
+    mean = data["list"][0]["definition"]
+    des = mean.replace("["," ")
+    des = des.replace("]"," ")
+    
+    embed = discord.Embed(color=0x2bc7ff,title=f'*{word}*',description=f'{des.capitalize()}')
+    embed.set_footer(text="")
+    await ctx.send(embed=embed)
+
 #To run the TokenId and Check the TokenId in the Discord
 cli.run(tokenid.tokenid)
    
