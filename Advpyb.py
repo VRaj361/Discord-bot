@@ -138,6 +138,27 @@ async def Udic(ctx,*,word):
     embed.set_footer(text="")
     await ctx.send(embed=embed)
 
+#Command:12 To ask the Question of computer knowledge (True/False) 
+@cli.command()
+
+async def Que(ctx):
+    data = requests.get(f'https://opentdb.com/api.php?amount=5&category=18&difficulty=easy&type=boolean').json()
+    man = data["results"][0]["correct_answer"]
+    embed = discord.Embed(color=0x2bc7ff,title='True/False',description=f'{data["results"][0]["question"]}')
+    
+    embed.set_footer(text="")
+    await ctx.send(embed=embed)
+    
+    def check(msg):#to check the Answer is  Correct or not 
+        return msg.author == ctx.author and msg.channel == ctx.channel and \
+        msg.content in ["True", "False"]
+
+    msg = await cli.wait_for("message", check=check)
+    if msg.content == f'{man}':
+        await ctx.send("Correct:white_check_mark:")
+    else:
+        await ctx.send("Incorrect:x:")
+
 #To run the TokenId and Check the TokenId in the Discord
 cli.run(tokenid.tokenid)
    
