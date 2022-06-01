@@ -21,4 +21,6 @@ To use this bot prefix should be "." (eg : '.Welcome')
 Link : https://discord.com/api/oauth2/authorize?client_id=867651080380874804&permissions=0&scope=bot<br>
 
 Bot is not yet Hosted <br>
-So It Will be Working When I Run the Code <br>
+So It will be Working When I Run the Code <br>
+
+<h2>Author:-> Vraj Patel</h2>
